@@ -15,15 +15,6 @@ Log:
 20150221 v2.0.1: Now should find cookies for base domain and all subs.
 20140518 v2.0: Now works with Chrome's new encrypted cookies.
 
-Intended use with requests:
-    import requests
-    import pyCookieCheat
-
-    url = 'http://www.example.com'
-
-    s = requests.Session()
-    cookies = pyCookieCheat.chrome_cookies(url)
-    s.get(url, cookies = cookies)
 '''
 
 import sqlite3
