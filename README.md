@@ -1,6 +1,6 @@
 # OSXChromeCookie.py
 
-Basic module to pull stored Chrome cookies used in the browser for sessions in Python scripts. 
+Simple module to extract stored Chrome cookies used in the browser for sessions in Python scripts. This works with pre-authenticated browser sessions and can bypass some single sign-on(SSO) services/redirects. 
 
 ## To use
 
