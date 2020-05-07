@@ -63,11 +63,11 @@ def chrome_cookies(URL):
     conn = sqlite3.connect(cookie_file)
     c = conn.cursor()
     sql = 'SELECT host_key, name, value, encrypted_value FROM cookies WHERE host_key == "' + URL + '"'
-
+    c.execute(sql)
     cookies = {}
     cookies_list = []
 
-    for host_key, name, value, encrypted_value in c.execute(sql):
+    for host_key, name, value, encrypted_value in c.fetchall():
         # if there is a not encrypted value or if the encrypted value
         # doesn't start with the 'v10' prefix, return v
         if value or (encrypted_value[:3] != b'v10'):
